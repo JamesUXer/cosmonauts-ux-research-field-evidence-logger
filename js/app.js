@@ -1,4 +1,4 @@
-// Pathfinder Field Evidence Logger — app controller.
+// Cosmonauts UX Research Field Evidence Logger — app controller.
 // No framework, no build step, so this can sit on GitHub Pages as-is.
 
 let db = null;
@@ -188,7 +188,7 @@ document.getElementById('btn-back').addEventListener('click', () => {
 // ---------- home ----------
 
 async function renderHome() {
-  setActiveView('home', 'Pathfinder Field Evidence Logger', false);
+  setActiveView('home', 'Cosmonauts UX Research Field Evidence Logger', false);
   const container = els.views.home;
   container.innerHTML = '';
 
@@ -287,7 +287,7 @@ function renderEntryForm(entry, mode) {
           '<textarea id="f-contextLimitation" rows="2" placeholder="Noise, second-hand account, interruption, ambiguity..."></textarea></div>' +
         '<div class="field field--interpretation"><label>Your interpretation (kept separate from the record above)</label>' +
           '<textarea id="f-interpretation" rows="3" placeholder="Optional — a provisional read, clearly not the direct evidence"></textarea></div>' +
-        '<div class="field"><label>Outside Pathfinder\u2019s current model</label>' +
+        '<div class="field"><label>Outside the current model</label>' +
           '<textarea id="f-outsideModel" rows="2" placeholder="Optional"></textarea></div>' +
         '<div class="field field--inline"><label for="f-followUp">Follow-up needed</label>' +
           '<input id="f-followUp" type="checkbox" /></div>' +

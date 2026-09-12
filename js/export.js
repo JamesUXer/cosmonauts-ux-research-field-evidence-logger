@@ -62,11 +62,11 @@ function buildJson(entries) {
 }
 
 function getEventLabel() {
-  return localStorage.getItem('pfl_eventLabel') || 'event';
+  return localStorage.getItem('curfel_eventLabel') || 'event';
 }
 
 function setEventLabel(label) {
-  localStorage.setItem('pfl_eventLabel', label || 'event');
+  localStorage.setItem('curfel_eventLabel', label || 'event');
 }
 
 function slugify(text) {
@@ -100,11 +100,11 @@ function downloadFile(filename, content, mimeType) {
 }
 
 function exportCsv(entries) {
-  const filename = 'pathfinder-evidence_' + slugify(getEventLabel()) + '_' + timestampForFilename() + '.csv';
+  const filename = 'cosmonauts-ux-research-evidence_' + slugify(getEventLabel()) + '_' + timestampForFilename() + '.csv';
   downloadFile(filename, buildCsv(entries), 'text/csv;charset=utf-8');
 }
 
 function exportJson(entries) {
-  const filename = 'pathfinder-evidence_' + slugify(getEventLabel()) + '_' + timestampForFilename() + '.json';
+  const filename = 'cosmonauts-ux-research-evidence_' + slugify(getEventLabel()) + '_' + timestampForFilename() + '.json';
   downloadFile(filename, buildJson(entries), 'application/json;charset=utf-8');
 }

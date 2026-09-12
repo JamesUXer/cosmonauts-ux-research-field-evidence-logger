@@ -3,7 +3,7 @@
 // counter, so entry IDs stay human-readable and never collide, even if two
 // entries are created in the same second).
 
-const DB_NAME = 'pathfinderFieldEvidenceDB';
+const DB_NAME = 'cosmonautsUxResearchFieldEvidenceDB';
 const DB_VERSION = 2;
 const ENTRY_FIELDS = [
   'id', 'createdAt', 'updatedAt', 'status', 'source', 'evidenceType',
