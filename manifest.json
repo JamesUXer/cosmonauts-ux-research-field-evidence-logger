@@ -1,5 +1,5 @@
 {
-  "name": "Pathfinder Field Evidence Logger",
+  "name": "Cosmonauts UX Research Field Evidence Logger",
   "short_name": "Field Logger",
   "description": "Offline-first evidence capture for field research at Cosmonauts events.",
   "start_url": "./index.html",

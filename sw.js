@@ -1,7 +1,7 @@
 // Bump this on every deploy that changes any cached file, so returning
 // visitors pick up the update instead of being stuck on a stale cache.
-const CACHE_VERSION = 'pfl-v3';
-const CACHE_PREFIX = 'pfl-';
+const CACHE_VERSION = 'curfel-v1';
+const CACHE_PREFIX = 'curfel-';
 
 const PRECACHE_URLS = [
   './',

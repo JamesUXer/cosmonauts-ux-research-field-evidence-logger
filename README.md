@@ -1,4 +1,4 @@
-# Pathfinder Field Evidence Logger
+# Cosmonauts UX Research Field Evidence Logger
 
 Offline-first evidence capture for field research at Cosmonauts events. Built to the spec dated
 in this repo. No backend, no login, no sync — everything lives on the phone in IndexedDB until
@@ -11,7 +11,7 @@ you export it.
 2. In the repo: **Settings → Pages → Build and deployment → Source: Deploy from a branch**.
 3. Branch: `main`, folder: `/ (root)`. Save.
 4. Wait a minute, then open the URL GitHub gives you (something like
-   `https://jamesuxer.github.io/pathfinder-field-evidence-logger/`).
+   `https://jamesuxer.github.io/cosmonauts-ux-research-field-evidence-logger/`).
 
 ## Install it on the phone
 
@@ -79,7 +79,7 @@ usable one-handed in a noisy room. Only the phone can tell you that.
 - **Accessibility.** Touch targets are 44px+, contrast follows a dark-on-light palette chosen for
   legibility, and focus states are visible — but this hasn't been through a screen reader or an
   automated contrast checker (e.g. Lighthouse, axe). Worth 20 minutes before the event.
-- **Icons** are placeholder shapes I generated, not a real Pathfinder/Cosmonauts mark. Swap them
+- **Icons** are placeholder shapes I generated, not an official Cosmonauts mark. Swap them
   if brand consistency matters here.
 
 ## Open decisions the spec itself flagged (unchanged — code can't resolve these)
