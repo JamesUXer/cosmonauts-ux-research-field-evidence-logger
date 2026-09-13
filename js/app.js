@@ -664,7 +664,7 @@ async function boot() {
   }
 
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js').catch(() => { /* still usable online-only this run */ });
+    navigator.serviceWorker.register('sw.js?v=4').catch(() => { /* still usable online-only this run */ });
     navigator.serviceWorker.addEventListener('controllerchange', () => {
       if (!location.hash || location.hash === '#/home') renderHome();
     });
