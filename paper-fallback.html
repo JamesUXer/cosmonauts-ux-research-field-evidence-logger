@@ -46,54 +46,6 @@
 </head>
 <body>
   <p class="intro">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Paper fallback — evidence card</title>
-<style>
-  @page { size: A4; margin: 12mm; }
-  * { box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
-    color: #16191C;
-    margin: 0;
-  }
-  .intro { padding: 0 4mm 6mm; font-size: 12px; color: #5B6167; }
-  .sheet {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6mm;
-  }
-  .card {
-    border: 1px solid #16191C;
-    border-radius: 4mm;
-    padding: 5mm;
-    page-break-inside: avoid;
-    min-height: 92mm;
-  }
-  .card h2 {
-    font-size: 13px;
-    margin: 0 0 3mm;
-    border-bottom: 1px solid #DFE3E5;
-    padding-bottom: 2mm;
-  }
-  .row { display: flex; gap: 2mm; margin-bottom: 2.5mm; font-size: 11px; }
-  .row .label { width: 32mm; flex-shrink: 0; font-weight: 600; }
-  .row .fill { flex: 1; border-bottom: 1px solid #C9CDCF; min-height: 4mm; }
-  .options { font-size: 9.5px; color: #5B6167; }
-  .evidence-block { margin-top: 3mm; }
-  .evidence-block .label { font-weight: 600; font-size: 11px; }
-  .lines { border-bottom: 1px solid #C9CDCF; height: 6mm; margin-top: 2mm; }
-  .footer-note { font-size: 9px; color: #8A9096; margin-top: 3mm; }
-  @media print {
-    .intro { display: none; }
-  }
-</style>
-</head>
-<body>
-  <p class="intro">
     Rapid-capture fallback. Choose talking or watching, never both at once. Record only what was
     observed or said, with no names, contact details or named accounts. Structure it in the app
     after stepping away. Keep the original until the transcription is checked.
@@ -136,54 +88,6 @@
       </div>
       <div class="row"><span class="label">Context / limits</span><span class="fill"></span></div>
       <div class="footer-note">Direct evidence only. Leave unseen behaviour blank.</div>
-    </div>
-  </div>
-</body>
-</html>
-    Print, cut along the card borders if needed. Same fields as the app, so entries transcribe
-    across without reinterpreting them. Mark transcribed cards "Source: paper fallback" and keep
-    the original until the transcription is checked.
-  </p>
-  <div class="sheet">
-    <div class="card">
-      <h2>Field evidence card</h2>
-      <div class="row"><span class="label">Entry ID</span><span class="fill"></span></div>
-      <div class="row"><span class="label">Time</span><span class="fill"></span></div>
-      <div class="row"><span class="label">Evidence type</span><span class="fill"></span></div>
-      <div class="options">Observation &middot; Attendee conversation &middot; Staff context</div>
-      <div class="row"><span class="label">Role</span><span class="fill"></span></div>
-      <div class="row"><span class="label">Org context</span><span class="fill"></span></div>
-      <div class="row"><span class="label">Event objective</span><span class="fill"></span></div>
-      <div class="row"><span class="label">Runs outreach?</span><span class="fill"></span></div>
-      <div class="row"><span class="label">Workflow stage</span><span class="fill"></span></div>
-      <div class="options">Before &middot; During &middot; Just after &middot; After event &middot; Cross-stage</div>
-      <div class="evidence-block">
-        <div class="label">What was observed or said</div>
-        <div class="lines"></div><div class="lines"></div><div class="lines"></div>
-      </div>
-      <div class="row"><span class="label">Context / limits</span><span class="fill"></span></div>
-      <div class="row"><span class="label">Follow-up needed?</span><span class="fill"></span></div>
-      <div class="footer-note">Direct evidence only — no interpretation on this card.</div>
-    </div>
-    <div class="card">
-      <h2>Field evidence card</h2>
-      <div class="row"><span class="label">Entry ID</span><span class="fill"></span></div>
-      <div class="row"><span class="label">Time</span><span class="fill"></span></div>
-      <div class="row"><span class="label">Evidence type</span><span class="fill"></span></div>
-      <div class="options">Observation &middot; Attendee conversation &middot; Staff context</div>
-      <div class="row"><span class="label">Role</span><span class="fill"></span></div>
-      <div class="row"><span class="label">Org context</span><span class="fill"></span></div>
-      <div class="row"><span class="label">Event objective</span><span class="fill"></span></div>
-      <div class="row"><span class="label">Runs outreach?</span><span class="fill"></span></div>
-      <div class="row"><span class="label">Workflow stage</span><span class="fill"></span></div>
-      <div class="options">Before &middot; During &middot; Just after &middot; After event &middot; Cross-stage</div>
-      <div class="evidence-block">
-        <div class="label">What was observed or said</div>
-        <div class="lines"></div><div class="lines"></div><div class="lines"></div>
-      </div>
-      <div class="row"><span class="label">Context / limits</span><span class="fill"></span></div>
-      <div class="row"><span class="label">Follow-up needed?</span><span class="fill"></span></div>
-      <div class="footer-note">Direct evidence only — no interpretation on this card.</div>
     </div>
   </div>
 </body>
