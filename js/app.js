@@ -657,6 +657,15 @@ async function renderExportView() {
 
 async function boot() {
   try {
+    // Recover cleanly if an interrupted deployment left an older app shell cached.
+    if ('caches' in window) {
+      const cacheNames = await caches.keys();
+      await Promise.all(
+        cacheNames
+          .filter((name) => name.startsWith('curfel-') && name !== 'curfel-v5')
+          .map((name) => caches.delete(name))
+      );
+    }
     db = await openDatabase();
   } catch (err) {
     document.body.innerHTML = '<p class="save-error" role="alert">This device could not open local storage. The app cannot run without it.</p>';
@@ -664,7 +673,7 @@ async function boot() {
   }
 
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js?v=4').catch(() => { /* still usable online-only this run */ });
+    navigator.serviceWorker.register('sw.js?v=5').catch(() => { /* still usable online-only this run */ });
     navigator.serviceWorker.addEventListener('controllerchange', () => {
       if (!location.hash || location.hash === '#/home') renderHome();
     });
