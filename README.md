@@ -40,20 +40,23 @@ screen reader — do that before the event, not after.
 
 - Offline install and launch (service worker + manifest)
 - Create, autosave, edit, list entries (IndexedDB, no data held only in page memory)
-- Rapid capture fields, with participant/context fields collapsed by default
-- Expansion fields (interpretation, research area, follow-up) shown only when you reopen an
-  entry — not during rapid capture, per the spec's own safer default
+- Separate talking and watching modes, with a reminder not to do both at once
+- A minimal rapid-capture form, with participant context collapsed by default
+- An in-app question guide containing the primary question, secondary questions and optional probes
+- Structured targeting, event-workflow, device-use and follow-up measures shown only when an entry
+  is reopened
+- Observed or reported evidence, participant confirmation and researcher interpretation stored as
+  separate fields
 - CSV export (UTF-8, one row per record) and JSON backup, both generated on-device
 - Delete with confirmation and a 6-second undo
-- Search and filter by evidence type / status
-- Paper fallback (`paper-fallback.html`) — same fields, print it and keep the originals until
-  transcribed copies are checked
+- Search and filter by capture mode / status
+- Paper fallback (`paper-fallback.html`) for rapid capture, followed by structured review in the app
 
 ## What's deliberately not built
 
-Matches the spec's non-goals exactly: no audio, no photos, no theme detection, no
-auto-classification, no suggested questions, no scoring, no live dashboard, no CRM/lead
-storage, no names or contact details, no multi-researcher sync.
+This version is for pre-use, general-behaviour discovery. It deliberately excludes screen-based
+product testing. There is no audio, photography, theme detection, auto-classification, scoring,
+live dashboard, CRM/lead storage, names, contact details or multi-researcher sync.
 
 ## What was actually tested before this was handed over
 
@@ -62,9 +65,9 @@ development in a simulated browser and IndexedDB environment:
 
 - entry IDs increment correctly and don't collide (E-001, E-002, ...)
 - typing into a field autosaves to IndexedDB, not just in-memory state
-- an entry with only evidence type + text is flagged complete; one missing either is flagged incomplete
-- direct evidence and interpretation are stored and exported as genuinely separate fields
-- CSV export has all 18 columns, contains the entered text, and has no stray "undefined" values
+- an entry with only capture mode + text is flagged complete; one missing either is flagged incomplete
+- direct evidence, participant confirmation and interpretation are stored and exported separately
+- CSV export has all 32 columns, contains the entered text, and has no stray "undefined" values
 - delete removes an entry from view immediately, and Undo actually restores it
 
 Those development checks are not included as a reproducible test suite in this small static repo.
@@ -88,5 +91,5 @@ usable one-handed in a noisy room. Only the phone can tell you that.
 2. How long do records stay on the phone after a successful export?
 3. Does Cosmonauts require specific consent wording for these conversations?
 4. Are the organisation-context categories the right mix for this event's attendees?
-5. Research-area tagging is hidden during rapid capture (the spec's own "safer default") — worth
-   confirming that's still the right call once you've used it a few times.
+5. Research-area tagging and behavioural measures are hidden during rapid capture. Confirm that
+   the review stage still feels manageable once you've used it at a real event.
