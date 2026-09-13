@@ -1,6 +1,6 @@
 // Bump this on every deploy that changes any cached file, so returning
 // visitors pick up the update instead of being stuck on a stale cache.
-const CACHE_VERSION = 'curfel-v4';
+const CACHE_VERSION = 'curfel-v5';
 const CACHE_PREFIX = 'curfel-';
 
 const PRECACHE_URLS = [
@@ -8,11 +8,11 @@ const PRECACHE_URLS = [
   './index.html',
   './paper-fallback.html',
   './manifest.json',
-  './css/styles.css?v=4',
-  './js/constants.js?v=4',
-  './js/db.js?v=4',
-  './js/export.js?v=4',
-  './js/app.js?v=4',
+  './css/styles.css?v=5',
+  './js/constants.js?v=5',
+  './js/db.js?v=5',
+  './js/export.js?v=5',
+  './js/app.js?v=5',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-maskable-512.png'
