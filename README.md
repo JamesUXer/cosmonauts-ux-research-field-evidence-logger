@@ -47,6 +47,8 @@ screen reader — do that before the event, not after.
   is reopened
 - Observed or reported evidence, participant confirmation and researcher interpretation stored as
   separate fields
+- Optional supplementary capture for event-value measures, decision context and structured responses
+  to selected Pathfinder concepts
 - CSV export (UTF-8, one row per record) and JSON backup, both generated on-device
 - Delete with confirmation and a 6-second undo
 - Search and filter by capture mode / status
@@ -67,7 +69,8 @@ development in a simulated browser and IndexedDB environment:
 - typing into a field autosaves to IndexedDB, not just in-memory state
 - an entry with only capture mode + text is flagged complete; one missing either is flagged incomplete
 - direct evidence, participant confirmation and interpretation are stored and exported separately
-- CSV export has all 32 columns, contains the entered text, and has no stray "undefined" values
+- CSV export has all 64 columns, including stable fields for each supplementary concept, contains the
+  entered text, and has no stray "undefined" values
 - delete removes an entry from view immediately, and Undo actually restores it
 
 Those development checks are not included as a reproducible test suite in this small static repo.
